@@ -15,10 +15,11 @@ var loadModel = _.once(function() {
 
 jQuery(document).ready(function($) {
     var recipeElement = $("#robot-recipe");
+    var recipeButton = $("#recipe-generate");
     
-    $("#recipe-generate").click(function() {
+    recipeButton.click(function() {
         recipeElement.text("Schaue im Rezeptbuch nach...");
-        document.getElementById("recipe-generate").className = "btn btn-dark disabled";
+        document.getElementById("recipe-generate").className = "btn btn-light disabled";
         loadModel().then(function(model) {
             var text = [];
 
