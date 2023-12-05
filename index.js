@@ -18,12 +18,13 @@ jQuery(document).ready(function($) {
     
     $("#recipe-generate").click(function() {
         recipeElement.text("Schaue im Rezeptbuch nach...");
-
+        document.getElementById("recipe-generate").className = "btn btn-dark disabled";
         loadModel().then(function(model) {
             var text = [];
 
             var generate = function(i) {
                 if (i > 400) {
+                    document.getElementById("recipe-generate").className = "btn btn-light";
                     return;
                 }
                 tf.tidy(function() {
