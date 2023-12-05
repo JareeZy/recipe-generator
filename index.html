@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <!-- required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS-->
+        <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <link rel="stylesheet" href = "style.css">
+
+        <!-- randomized background image script-->
+        <script type="text/javascript"> 
+            var totalCount = 4;
+            function ChangeIt() 
+            {
+            var num = Math.ceil( Math.random() * totalCount );
+            document.body.background = 'bgimages/'+num+'.jpg';
+            document.body.style.backgroundRepeat = "repeat";// Background repeat
+            }
+            </script>
+
+        <title>Weihnachtsrezept-Automaton</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card card-recipe">
+                <div class="card-body">
+                    <h5 class="card-title">Für unser heutiges Weihnachtsessen machen wir:</h5>
+                    <p class="card-text" id ="robot-recipe"></p>
+                    <a id = "recipe-generate" href="#" class="btn btn-light">Neues Weihnachtsezept!</a>
+                </div>
+            </div>
+
+        <!-- Optional Javascript-->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+        <script src="lib/jquery-3.7.1.slim.js"></script>
+        <script src="lib/lodash.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+
+        <script src="lib/tfjs.js"></script>
+        <script src="data/words.js"></script>
+        
+        <script src="index.js"></script>
+     </body>
+     <script type="text/javascript"> 
+        ChangeIt();
+     </script>
+</html>
